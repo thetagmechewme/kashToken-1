@@ -9,28 +9,20 @@
 ~Investment funds instantly delivered to wallet project wallet immediately after the project ends
 
 ~Extra unsold tokens delivered to teams Escrow wallet
-Pre-Sale - 7 days
 
-Price: 1 Ether = 2700 KASH
+Price: 1 Uni = 2222 4LEAF
 
-Begin: July 7
+Begin: January 3
+each phase lasts until all 222222 4LEAFS ARE SOLD
 
-End: July 13
-ICO - 40 days
+Name: 4Leaf
 
-Price: 1 Ether = 1350 KASH
+Symbol: 4LEAF
 
-Begin: July 14
+Decimals: 11
 
-End: August 14
-Name: Kash
-
-Symbol: KASH
-
-Decimals: 18
-
-Quantity: 200,000,000
+Quantity: 222,222,222
 
 What other info do you need?
 
-Soft Cap: 2500 ETH Hard Cap: 37,500 ETH
+Soft Cap:  222 Uni Hard Cap: 11111 Uni
