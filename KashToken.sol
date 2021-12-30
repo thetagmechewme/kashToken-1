@@ -5,9 +5,9 @@ import "./StandardToken.sol";
 
 
 contract KASHToken is StandardToken {
-    string public constant NAME = "KASH";
-    string public constant SYMBOL = "KASH";
-    uint public constant DECIMALS = 18;
+    string public constant NAME = "4LEAF";
+    string public constant SYMBOL = "4LEAF";
+    uint public constant DECIMALS = 11;
 
     /// During token sale, we use one consistent price: 5000 LRC/ETH.
     /// We split the entire token sale period into 10 phases, each
@@ -29,10 +29,10 @@ contract KASHToken is StandardToken {
 
     uint public constant NUM_OF_PHASE = 10;
   
-    /// Each phase contains exactly 15250 Ethereum blocks, which is roughly 3 days,
+    /// Each phase contains exactly 22,222 Ethereum blocks, which is roughly 3 days,
     /// which makes this 10-phase sale period roughly 30 days.
     /// See https://www.ethereum.org/crowdsale#scheduling-a-call
-    uint16 public constant BLOCKS_PER_PHASE = 15250;
+    uint16 public constant BLOCKS_PER_PHASE = 22222;
 
     /// This is where we hold ETH during this token sale. We will not transfer any Ether
     /// out of this address before we invocate the `close` function to finalize the sale. 
@@ -45,23 +45,23 @@ contract KASHToken is StandardToken {
 
     /// `firstblock` specifies from which block our token sale starts.
     /// This can only be modified once by the owner of `target` address.
-    uint public firstblock = 0;
+    uint public firstblock = 2;
 
     /// Indicates whether unsold token have been issued. This part of KASH token
     /// is managed by the project team and is issued directly to `target`.
     bool public unsoldTokenIssued = false;
 
     /// Minimum amount of funds to be raised for the sale to succeed. 
-    uint256 public constant GOAL = 50000 ether;
+    uint256 public constant GOAL = 222 uni;
 
     /// Maximum amount of fund to be raised, the sale ends on reaching this amount.
-    uint256 public constant HARD_CAP = 120000 ether;
+    uint256 public constant HARD_CAP = 11111 uni;
 
     /// Maximum unsold ratio, this is hit when the mininum level of amount of fund is raised.
     uint public constant MAX_UNSOLD_RATIO = 675; // 67.5%
 
     /// Base exchange rate is set to 1 ETH = 5000 LRC.
-    uint256 public constant BASE_RATE = 5000;
+    uint256 public constant BASE_RATE = 10101;
 
     /// A simple stat for emitting events.
     uint public totalEthReceived = 0;
@@ -140,7 +140,7 @@ contract KASHToken is StandardToken {
     /**
      * CONSTRUCTOR 
      * 
-     * @dev Initialize the KASH Token
+     * @dev Initialize the 4LEAF Token
      * @param _target The escrow account address, all ethers will
      * be sent to this address.
      * This address will be : 0x00073F7155459C9205010Cb3453a0f392a0C3210 example
@@ -233,11 +233,11 @@ contract KASHToken is StandardToken {
     /// @dev Issue unsold token to `target` address.
     /// The math is as follows:
     ///   +-------------------------------------------------------------+
-    ///   |       Total Ethers Received        |                        |
+    ///   |       Total Uni Received        |                        |
     ///   +------------------------------------+  Unsold Token Portion  |
     ///   |   Lower Bound   |   Upper Bound    |                        |
     ///   +-------------------------------------------------------------+
-    ///   |      50,000     |     60,000       |         67.5%          |
+    ///   |      1,500     |     1500.00       |         67.5%          |
     ///   +-------------------------------------------------------------+
     ///   |      60,000     |     70,000       |         65.0%          |
     ///   +-------------------------------------------------------------+
